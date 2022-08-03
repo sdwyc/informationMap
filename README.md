@@ -85,7 +85,7 @@ $ Paper coming soon
 ```
 - **Video**: 
 
-  <iframe height=498 width=510 src="https://youtu.be/AcaPfC4WGOs">
+  <iframe height=498 width=510 src="https://youtu.be/AcaPfC4WGOs"/>
 
   <img src="docs/pointcloud1.png" alt="image" style="zoom:33%;" /><img src="docs/pointcloud_2.png" alt="image" style="zoom: 33%;" />
 
