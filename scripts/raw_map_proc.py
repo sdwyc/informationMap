@@ -13,11 +13,13 @@ class map_processor:
         self.info_generator = nn_interface.map2inform(file_path+'/nn_model/best_model_params.pth')
         print('Network Ready!')
 
+    # convert map list data into map matrix
     def map_matrix_gen(self, map_list, width, height):
         map_list = np.array(map_list).reshape([height,width])
         map_matrix = np.flip(map_list,axis=0)
         return map_matrix.copy()
     
+    # convert map matrix into map list data
     def get_maplist(self, map_mat, map_size):
         
         map_list = np.flip(map_mat,axis=0)
@@ -67,6 +69,7 @@ class map_processor:
         
         return local_map.copy()
 
+    # obtain the network output
     def get_info_map(self, local_map):
         info_map = self.info_generator.get_inform(local_map)
         info_map = np.flip(info_map,axis=0)

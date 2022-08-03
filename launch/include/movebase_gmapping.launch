@@ -51,6 +51,7 @@
     <rosparam file="$(find information_map)/config/move_base/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find information_map)/config/move_base/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find information_map)/config/move_base/move_base_params.yaml" command="load" />
+    <!-- <rosparam file="$(find information_map)/config/move_base/teb_local_planner_params.yaml" command="load" /> -->
   </node>
 
 </launch>

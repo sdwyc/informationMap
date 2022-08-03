@@ -17,6 +17,7 @@ class Visualization(object):
         self.z_diff = 7.5
         self.frame = "map"
     
+    # set color map
     def Jet_colormap(self, gray_value):       # input: gray value 0~1 output: R,G,B
         cmap_value = int(gray_value * 255)
         if cmap_value < 32 :
@@ -61,6 +62,7 @@ class Visualization(object):
         
         return int(Red),int(Green),int(Blue)
 
+    #calculate every cell's coordinate values
     def MatToCoor(self, robot_pose, info_map, resolution):
         self.points.clear()
         self.channels.clear()
@@ -80,7 +82,7 @@ class Visualization(object):
                 pt = [x, y, z, rgb]
                 self.points.append(pt)
         
-    
+    # return the pointcloud2 object
     def CloudObject(self, robot_pose, info_map, resolution):
         self.MatToCoor(robot_pose, info_map, resolution)
         fields = [PointField('x', 0, PointField.FLOAT32, 1),

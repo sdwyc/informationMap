@@ -3,7 +3,7 @@ It's a ROS package that generates the information map for autonomous exploration
 
   - Information map generator node.
 
-This is a [Youtube playlist](https://www.youtube.com/playlist?list=PLoGH52eUIHsc1B_xPLL6ogzYxrWy675kr) showing the package running online, using simulation (Gazebo).
+This is a [Youtube playlist](https://youtu.be/AcaPfC4WGOs) showing the package running online, using simulation (Gazebo).
 
 
 ## 1. Requirements
@@ -24,10 +24,12 @@ $ sudo apt-get install ros-noetic-gmapping ros-noetic-move-base*
 6-You should have/install the following python modules:
 
 -OpenCV (cv2)
+
 ```sh
 $ sudo apt-get install python-opencv
 ```
 -Numpy
+
 ```sh
 $ sudo apt-get install python-numpy
 ```
@@ -41,11 +43,24 @@ $ catkin_make
 
 ## 3. Run Demo:
 ### 3.1 Step in your workspace
-### 3.2 
+### 3.2  
 ```sh
 $ bash test.sh
 ```
+### 3.3 Subscribe and Publish ROS Topic
+
+- **Subscribe**: "*map*" raw occupancy grid map, frequency less than 1Hz
+
+- **Publish**: 
+
+  "*information_map*" --- occupancy grid map
+
+  "*local_map*" --- occupancy grid map
+
+  "*vis_infomap*" --- pointcloud2
+
 ### 3.3 Outcome
+
 <img src="docs/total%20info_map.png" alt="image" style="zoom: 50%;" />
 
 Top -> Bottom: information map(pointcloud) --> information map(occupied map) --> local map
@@ -68,9 +83,10 @@ $ src/information_map/scripts/network.py
 ```sh
 $ Paper coming soon
 ```
-<img src="docs/pointcloud1.png" alt="image" style="zoom:33%;" /><img src="docs/pointcloud_2.png" alt="image" style="zoom: 33%;" />
+- **Video**: 
 
-<img src="docs/info_map1.png" alt="image" style="zoom:38%;" /><img src="docs/info_map2.png" alt="image" style="zoom:38%;" />
+  <iframe height=498 width=510 src="https://youtu.be/AcaPfC4WGOs">
 
-<img src="docs/local_map1.png" alt="image" style="zoom:37%;" /><img src="docs/local_map2.png" alt="image" style="zoom:37%;" />
+  <img src="docs/pointcloud1.png" alt="image" style="zoom:33%;" /><img src="docs/pointcloud_2.png" alt="image" style="zoom: 33%;" />
 
+<img src="docs/nav.gif" alt="gif" style="zoom:50%;" />

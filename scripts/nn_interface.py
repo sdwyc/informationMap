@@ -13,7 +13,8 @@ class map2inform():
         self.device = "cuda:0"
         self.model = network.Generator(1,1).to(self.device).eval()
         self.model.load_state_dict(torch.load(model_path))
-        
+
+    # get network model output 
     def get_inform(self,map):
         map[map==-1] = 200
         map = torch.from_numpy(map).float().to(self.device)/255
