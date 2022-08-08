@@ -2,7 +2,7 @@
 
 cd scripts
 
-gnome-terminal -t "ros_server" -x bash -c "roslaunch information_map sim_env.launch;exec bash;"
+gnome-terminal -t "ros_server" -- bash -c "roslaunch information_map sim_env.launch;exec bash;"
 
 sleep 1s
 
